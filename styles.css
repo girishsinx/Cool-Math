@@ -236,11 +236,72 @@ footer {
   flex: 1;
   text-align: left;
 }
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 992px) {
+  #math-topics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links {
+    margin-top: 20px;
+  }
+  .nav-links a {
+    margin: 0 10px;
+  }
+  .hero h1 {
+    font-size: 2.5em;
+  }
   .about-flex {
     flex-direction: column;
   }
   .about-text {
     text-align: center;
   }
+  .about-image {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  #math-topics {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .cta-button {
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+}
+
+/* Ensure the calculator is responsive */
+#calculator {
+  width: 100%;
+  height: 60vh;
+  min-height: 300px;
+}
+
+/* Make sure images don't overflow their containers */
+img {
+  max-width: 100%;
+  height: auto;
 }
