@@ -1,0 +1,246 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007bff;
+}
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #007bff;
+}
+.hero {
+  text-align: center;
+  padding: 100px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: #0056b3;
+}
+#math-topics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 50px 0;
+}
+.topic {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeIn 1s ease-out;
+}
+.topic:hover {
+  transform: translateY(-5px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.topic h3 {
+  background-color: #007bff;
+  color: white;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+.topic img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.topic p {
+  padding: 1rem;
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#courses-section,
+#about-section,
+#contact-section,
+#calculator-section {
+  display: none;
+  animation: fadeIn 0.5s ease-out;
+}
+#about-section,
+#contact-section,
+#calculator-section {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 50px 0;
+  margin-top: 50px;
+}
+.about-content,
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-content h2,
+.contact-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+.about-content p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out 0.2s;
+  animation-fill-mode: both;
+}
+.contact-content h2 {
+  background: linear-gradient(45deg, #3498db, #8e44ad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.contact-info {
+  margin-bottom: 30px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.submit-btn {
+  background: linear-gradient(45deg, #3498db, #8e44ad);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+.contact-outro {
+  margin-top: 30px;
+  font-style: italic;
+}
+#calculator {
+  width: 100%;
+  height: 500px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.about-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+.about-image:hover {
+  transform: scale(1.05);
+}
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+  }
+  .about-text {
+    text-align: center;
+  }
+}
